@@ -18,7 +18,7 @@ function addKitten(event) {
       // @ts-ignore
       image: "https://robohash.org/" + kittenName + "?set=set4",
       name: kittenName,
-      mood: "Tolerant",
+      mood: "tolerant",
       affection: 5
     }
     kittens.push(kitten)
@@ -49,7 +49,6 @@ function clearKittens() {
   if (kittens = []) {
     document.getElementById("clear-kittens").classList.add("hidden");
   }
-
   window.localStorage.clear()
 }
 /**
