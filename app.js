@@ -51,9 +51,8 @@ function clearKittens() {
   }
   window.localStorage.clear()
 }
-/**
- * Draw all of the kittens to the kittens element
- */
+
+
 function drawKittens() {
   let kittensElement = document.getElementById("kittens")
   let kittenTemplate = ""
@@ -65,6 +64,7 @@ function drawKittens() {
         <img src= "${kitten.image}" class="kitten gone m-1" alt="kitten image" height="125">
         <div>
           <h1><span>${kitten.name}</span></h1>
+          <p>Leave Me Alone!</p>
        </div> 
       </div>`
     }
@@ -168,16 +168,7 @@ function getStarted() {
   loadKittens()
 }
 
-/**
- * Defines the Properties of a Kitten
- * @typedef {{id: string, name: string, mood: string, affection: number}} Kitten
- */
 
-/**
- * Used to generate a random string id for mocked
- * database generated Id
- * @returns {string}
- */
 function generateId() {
   return (
     Math.floor(Math.random() * 10000000) +
